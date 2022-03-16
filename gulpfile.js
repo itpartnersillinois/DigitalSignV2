@@ -4,12 +4,6 @@ var cssmin = require('gulp-cssmin');
 var terser = require('gulp-terser');
 var sass = require('gulp-dart-sass');
 var mergeseries = require('stream-series');
-var fs = require('fs');
-
-gulp.task("addTime", function(cb){
-  let date = Date.now();
-  fs.writeFile('json/timeout.json', '{ "time": ' + date + ' }', cb);
-});
 
 gulp.task("styles", function () {
     return gulp.src(['_sass/*.scss'])
@@ -35,4 +29,4 @@ gulp.task("simple-script", function () {
         .pipe(gulp.dest('script'));
 });
 
-gulp.task("default", gulp.series("addTime", "styles", "simple-script", "lobby-script"));
+gulp.task("default", gulp.series("styles", "simple-script", "lobby-script"));
