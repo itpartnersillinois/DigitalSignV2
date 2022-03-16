@@ -1,0 +1,41 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{{ sign.title }}</title>
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick.css" />
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick-theme.css" />
+    <link rel="stylesheet" type="text/css" href="/style/site.css?t=20220314" />
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick.min.js"></script>
+    <script> var twitterUrl = 'https://jonker.web.illinois.edu/json/twitter.json?id={{ sign.twitter }}' ; </script>
+    <script type="text/javascript" src="/script/lobby.min.js?t=20220314"></script>
+</head>
+<body class="white">
+    <div class="lobby-wrapper">
+        <div class="header">
+            <img src="https://cdn-e.education.illinois.edu/system-images/logo-illinois.png" alt="Illinois Logo" />{{ sign.title }}
+        </div>
+        <div class="main-section">
+            <div class="twitter">
+                <div class="twitter-slider">
+                </div>
+            </div>
+            <div class="main-lobby">
+                    <div class="carousel">
+                        {{ sign.slides | displaySlides: 'image-lobby' }}
+                    </div>
+            </div>
+            <div class="footer">
+                <span id="time">
+                    00:00:00 AM
+                </span>
+            </div>
+        </div>
+    </div>
+    <div class="emergencyMessage" style="display: none;">
+        <div class="title"></div><div class="body"></div><div class="time"></div>
+    </div>
+</body>
+</html>

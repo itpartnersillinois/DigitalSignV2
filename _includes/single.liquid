@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta name="viewport" content="width=device-width">
+        <title>{{ sign.title }}</title>
+        <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick.css" />
+        <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick-theme.css" />
+        <link rel="stylesheet" type="text/css" href="/style/site.css?t=20220314" />
+        <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+        <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+        <script type="text/javascript" src="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick.min.js"></script>
+        <script type="text/javascript" src="/script/simple.min.js?t=20220314"></script>
+    </head>
+    <body>
+        <div class="carousel full">
+            {{ sign.slides | displaySlides: 'image-full' }}
+        </div>
+        <div class="emergencyMessage" style="display: none;">
+            <div class="title"></div><div class="body"></div><div class="time"></div>
+        </div>
+    </body>
+</html>

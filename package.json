@@ -1,0 +1,30 @@
+{
+  "name": "digitalsigns",
+  "version": "1.0.0",
+  "description": "",
+  "main": ".eleventy.js",
+  "dependencies": {
+    "@11ty/eleventy": "^0.11.0",
+    "gulp": "^4.0.2",
+    "gulp-concat": "*",
+    "gulp-cssmin": "*",
+    "gulp-rename": "*",
+    "gulp-dart-sass": "*",
+    "gulp-terser": "*",
+    "markdown-it": "^11.0.0",
+    "markdown-it-attrs": "^3.0.3",
+    "sass": "*",
+    "fs": "*",
+    "stream-series": "*"
+  },
+  "devDependencies": {
+    "npm-run-all": "^4.1.5"
+  },
+  "scripts": {
+    "gulp": "gulp",
+    "eleventy": "eleventy --formats=\"html,md,liquid,gif,jpg,png,css,svg,ttf,woff,woff2,pdf,js,json\"",
+    "all": "npm run gulp && npm run eleventy"
+  },
+  "author": "Bryan Jonker, jonker@illinois.edu",
+  "license": "ISC"
+}

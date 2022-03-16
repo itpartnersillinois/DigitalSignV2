@@ -1,0 +1,24 @@
+name: CI
+on:
+  push:
+    branches:
+    - main
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v1
+    - run: npm install
+    - run: npm rebuild
+    - run: npm run-script gulp
+    - run: npm run-script eleventy
+    - name: Configure AWS Credentials
+      uses: aws-actions/configure-aws-credentials@v1
+      with:
+        aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_TS_V2_ID }}
+        aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_TS_V2_KEY }}
+        aws-region: us-east-2
+    - name: Deploy static site to S3 bucket
+      run: aws s3 sync ./_site/ s3://s3robust-digitalsignsv2/content --delete --acl bucket-owner-full-control
+    - name: Invalidate Cloudfront cache
+      run: aws cloudfront create-invalidation --distribution-id {DISTRIBUTIONID} --paths "/*"

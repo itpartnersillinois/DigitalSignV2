@@ -1,0 +1,86 @@
+﻿body {
+    .weather {
+        .text {
+            background: rgba(255, 255, 255, .1);
+            display: flex;
+            margin: 7% auto;
+            padding: 3%;
+            width: 80%;
+            justify-content: space-around;
+
+            .weatherblock {
+                background-color: rgba(255,255,255,.9);
+                margin: 0 20px;
+                padding: 50px;
+                border-radius: 50px;
+                font-size: 1.5em;
+
+                h2 {
+                    margin-top: 0;
+                    text-align: center;
+                }
+
+                p {
+                    font-size: 1.2em;
+
+                    &.weatherheader {
+                        font-size: 1.5em;
+                        font-weight: bold;
+                    }
+                }
+            }
+        }
+
+        background-image: url(/images/weather/default.jpg);
+
+        &.clear-day {
+            background-image: url(/images/weather/clear-day.jpg);
+        }
+
+        &.clear-night {
+            background-image: url(/images/weather/clear-night.jpg);
+        }
+
+        &.cloudy {
+            background-image: url(/images/weather/cloudy.jpg);
+        }
+
+        &.fog {
+            background-image: url(/images/weather/fog.jpg);
+        }
+
+        &.partly-cloudy-day {
+            background-image: url(/images/weather/partly-cloudy-day.jpg);
+        }
+
+        &.partly-cloudy-night {
+            background-image: url(/images/weather/partly-cloudy-night.jpg);
+        }
+
+        &.rain {
+            background-image: url(/images/weather/rain.jpg);
+        }
+
+        &.sleet {
+            background-image: url(/images/weather/sleet.jpg);
+        }
+
+        &.snow {
+            background-image: url(/images/weather/snow.jpg);
+        }
+
+        &.wind {
+            background-image: url(/images/weather/wind.jpg);
+        }
+    }
+
+    &.noheader {
+        .weather {
+            .text {
+                .weatherblock {
+                    font-size: 1.75em;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,30 @@
+﻿.header {
+    background-color: #13294B;
+    font-size: 5.125em;
+    font-weight: 700;
+    padding: .2em .3em;
+    text-align: right;
+    color: white;
+    margin: 0;
+
+    img {
+        float: left;
+        padding-top: 10px;
+        height: .9em;
+    }
+}
+
+.lobby-wrapper .header {
+    border-bottom: 10px #e84a27 solid;
+}
+
+@media only screen and (max-width: 1200px) {
+    .header.web {
+        font-size: 7vw;
+        text-align: center;
+
+        img {
+            display: none;
+        }
+    }
+}

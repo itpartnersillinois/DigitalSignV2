@@ -1,0 +1,53 @@
+﻿.twitter {
+    position: absolute;
+    width: 20%;
+    left: 0;
+    font-family: 'Gotham Book','Trebuchet MS',Helvetica,sans-serif;
+    padding: 2em .4em 0 .4em;
+    height: 100vh;
+    max-height: 100vh;
+
+    .slick-slide {
+        height: auto;
+        min-height: auto;
+        max-height: 500px;
+        overflow: hidden;
+        display: flex!important;
+        flex-direction: column;
+      }
+
+    img {
+        max-width: 100%;
+    }
+
+    .heading {
+        font-size: 1.6rem;
+        font-weight: bold;
+        padding-top: 20px;
+        margin-left: 5px;
+        margin-right: 5px;
+
+        img.user-image {
+            width: 55px;
+            float: left;
+            padding-right: 10px;
+            border-radius: 5px;
+        }
+    
+        .screenname {
+            color: #8899a6;
+            line-height: 1;
+            margin-top: 0;
+        }
+    }
+
+    .tweet {
+        margin-right: 5px;
+        margin-left: 5px;
+    }
+
+    img.tweet-image {
+        width: 100%;
+        height: 100%;
+    }
+}

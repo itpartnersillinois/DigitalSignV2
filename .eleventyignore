@@ -1,0 +1,10 @@
+README.md
+node_modules
+_sass
+_scripts
+_data
+_includes
+package-lock.json
+package.json
+.eleventy.js
+gulpfile.js
