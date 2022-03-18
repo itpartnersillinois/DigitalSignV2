@@ -1,12 +1,12 @@
 ﻿let timeoutValue = '';
 $(document).ready(function () {
     setInterval(function () { checkEmergency(); }, 6000);
-    setInterval(function () { checkTimeout(); }, 6000);
+    setInterval(function () { checkTimeout(); }, 30000);
 });
 
 function checkEmergency() {
     $.ajax({
-        url: 'https://jonker.web.illinois.edu/json/emergency.json',
+        url: 'https://digitalsignv2.azurewebsites.net/emergency/get',
         type: 'GET',
         success: function (data) {
             if (data === '') {
