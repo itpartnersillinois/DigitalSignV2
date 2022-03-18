@@ -1,7 +1,7 @@
 ---
-layout: single-with-title.liquid
+layout: simplewithtitle.liquid
 pagination:
-    data: single-with-title
+    data: simplewithtitle
     size: 1
     alias: sign
 permalink: "{{ sign.url }}/"

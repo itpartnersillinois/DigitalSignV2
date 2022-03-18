@@ -13,7 +13,13 @@
                 "filename": "/images/edlobby/1.png"
             },
             {
-                "type": "weather"
+                "type": "weather",
+                "filename": ""
+            },
+            {
+                "type": "calendar",
+                "data": "1",
+                "filename": "Margolis Market Information Lab"
             },
             {
                 "type": "image",

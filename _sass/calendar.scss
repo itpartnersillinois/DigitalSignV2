@@ -1,0 +1,46 @@
+.calendar-slide {
+    color: white;
+    background-color: #15274b;
+
+    p {
+        font-size: 2.2vh;
+        text-align: center;
+        margin: 0;
+    }
+
+    p.room {
+        font-size: 5em;
+        font-weight: 700;
+        padding: 1em;
+        border-bottom: thin white solid;
+    }
+
+    p.title {
+        padding-top: .5em;
+
+        &.long {
+            font-size: 1.5vh;
+        }
+    }
+
+    p.date {
+        border-bottom: thin white solid;
+        padding-bottom: .5em;
+        padding-top: .2em;
+        font-size: 1.6vh;
+    }
+
+    .calendar-items {
+        height: calc(100vh - 475px);
+        overflow-y: hidden;
+    }
+
+    div.calendar-footer {
+        padding-top: 10px;
+        background-image: url(/images/gies-footer.png);
+        width: 100%;
+        height: 100px;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+}

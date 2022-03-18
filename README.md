@@ -2,7 +2,7 @@
 
 ## Summary: 
 
-Digital Sign Generator website, using a site generator. 
+Digital Sign Generator website, using a site generator. Note that this has a non-standard structure -- "staging" is used as an staging process for the digital sign editor. Because of this, all branches should be merged with the staging branch. 
 
 ## Production location: 
 
