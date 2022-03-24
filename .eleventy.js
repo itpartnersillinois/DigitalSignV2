@@ -26,7 +26,7 @@ module.exports = (function (eleventyConfig) {
         returnValue = returnValue + `<div class="${className} weather"></div>`;
       }
       if (element.type == 'calendar') {
-        returnValue = returnValue + `<div class="${className} calendar-slide"><p class="room">${element.filename}</p><div class="calendar-items" data-calendarid="${element.data}"></div><div class="calendar-footer"></div></div></div>`;
+        returnValue = returnValue + `<div class="${className} calendar-slide"><p class="room">${element.title}</p><div class="calendar-items" data-calendarid="${element.data}"></div><div class="calendar-footer"></div></div></div>`;
       }
     });
     return returnValue;
