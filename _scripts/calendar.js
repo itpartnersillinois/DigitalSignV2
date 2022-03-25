@@ -8,7 +8,7 @@ function checkCalendar() {
     if ($('div.calendar-items').length > 0) {
         $('div.calendar-items').each(function(i, obj) {
             $.ajax({
-                url: 'https://digitalsignv2.azurewebsites.net/api/data/calendar/' + obj.getAttribute('data-calendarid'),
+                url: 'https://digitalsigneditor.education.illinois.edu/api/data/calendar/' + obj.getAttribute('data-calendarid'),
                 type: 'GET',
                 success: function (data) {
                     var html = '';
