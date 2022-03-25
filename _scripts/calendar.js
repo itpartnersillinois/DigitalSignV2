@@ -4,7 +4,6 @@ $(document).ready(function () {
 });
 
 function checkCalendar() {
-    debugger;
     if ($('div.calendar-items').length > 0) {
         $('div.calendar-items').each(function(i, obj) {
             $.ajax({

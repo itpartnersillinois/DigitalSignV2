@@ -4,7 +4,6 @@ $(document).ready(function () {
 });
 
 function checkWeather() {
-    debugger;
     if ($('div.weather').length > 0) {
         $.ajax({
             url: 'https://digitalsigneditor.education.illinois.edu/api/data/weather',
