@@ -13,7 +13,7 @@
                 margin: 0 20px;
                 padding: 50px;
                 border-radius: 50px;
-                font-size: 1.5em;
+                font-size: 1.5rem;
 
                 h2 {
                     margin-top: 0;
@@ -24,7 +24,7 @@
                     font-size: 1.2em;
 
                     &.weatherheader {
-                        font-size: 1.5em;
+                        font-size: 1.5rem;
                         font-weight: bold;
                     }
                 }
@@ -78,9 +78,10 @@
         .weather {
             .text {
                 .weatherblock {
-                    font-size: 1.75em;
+                    font-size: 1.75rem;
                 }
             }
+            
         }
     }
 }

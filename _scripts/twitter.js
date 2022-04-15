@@ -7,9 +7,6 @@ function addTwitterSlides() {
     $.ajax({
         url: twitterUrl,
         type: 'GET',
-        error: function (xhr, ajaxOptions, thrownError) {
-            alert(xhr.status);
-        },
         success: function (data) {
             var html = "";
             for (var i = 0; i < data.length; i++) {
