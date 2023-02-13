@@ -7,7 +7,7 @@ function checkCalendar() {
     if ($('div.calendar-items').length > 0) {
         $('div.calendar-items').each(function(i, obj) {
             $.ajax({
-                url: 'https://digitalsigneditor.education.illinois.edu/api/data/calendar/' + obj.getAttribute('data-calendarid'),
+                url: 'https://digitalsigneditor.itpartners.illinois.edu/api/data/calendar/' + obj.getAttribute('data-calendarid'),
                 type: 'GET',
                 success: function (data) {
                     var html = '';

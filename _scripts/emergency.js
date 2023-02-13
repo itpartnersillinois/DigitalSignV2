@@ -6,7 +6,7 @@ $(document).ready(function () {
 
 function checkEmergency() {
     $.ajax({
-        url: 'https://digitalsigneditor.education.illinois.edu/emergency/get',
+        url: 'https://digitalsigneditor.itpartners.illinois.edu/emergency/get',
         type: 'GET',
         success: function (data) {
             if (data === '') {

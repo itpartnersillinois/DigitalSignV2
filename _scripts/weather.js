@@ -6,7 +6,7 @@ $(document).ready(function () {
 function checkWeather() {
     if ($('div.weather').length > 0) {
         $.ajax({
-            url: 'https://digitalsigneditor.education.illinois.edu/api/data/weather',
+            url: 'https://digitalsigneditor.itpartners.illinois.edu/api/data/weather',
             type: 'GET',
             success: function (data) {
                 var html = '<div class="text"><div class="weatherblock"><h2>' + data.day1.title + '</h2>';
