@@ -85,3 +85,27 @@
         }
     }
 }
+
+@media (orientation: portrait) {
+    body .full {
+        .image-full.weather {
+            background-position: center;
+            background-size: cover;
+
+            .text {
+                flex-direction: column;
+                row-gap: 30px;
+                background-position: center;
+                background-size: cover;
+                height: 90vh;
+                margin-top: 0;
+                margin-bottom: 0;
+
+                .weatherblock {
+                    font-size: 1rem;
+                    padding: 10px 50px;
+                }
+            }
+      }
+    }
+}
