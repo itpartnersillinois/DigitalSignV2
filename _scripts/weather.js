@@ -16,6 +16,7 @@ function checkWeather() {
                 if (data.day1.wind != '') html += '<p>' + data.day1.wind + '</p>';
                 html += '</div>';
                 html += '<div class="weatherblock"><h2>' + data.day2.title + '</h2>';
+                html += '<p class="weatherheader">' + data.day2.summary + '</p>';
                 html += '<p>Temperature: ' + data.day2.temperature + 'F</p>';
                 if (data.day2.precipitation != '') html += '<p>' + data.day2.precipitation + '</p>';
                 if (data.day2.wind != '') html += '<p>' + data.day2.wind + '</p>';
