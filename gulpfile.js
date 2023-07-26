@@ -14,7 +14,7 @@ gulp.task("styles", function () {
 });
 
 gulp.task("lobby-script", function () {
-    var customJs = gulp.src(['_scripts/slides.js', '_scripts/lobby.js', '_scripts/emergency.js', '_scripts/twitter.js', '_scripts/weather.js', '_scripts/calendar.js']);
+    var customJs = gulp.src(['_scripts/slides.js', '_scripts/lobby.js', '_scripts/emergency.js', '_scripts/weather.js', '_scripts/calendar.js']);
     return mergeseries(customJs)
         .pipe(concat('lobby.min.js'))
         .pipe(gulp.dest('script'));
