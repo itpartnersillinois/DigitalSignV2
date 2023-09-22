@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta name="viewport" content="width=device-width">
+        <title>{{ sign.title }}</title>
+        <link type="text/css" rel="stylesheet" href="https://cdn.brand.illinois.edu/toolkit/2/toolkit.css">
+        <script type="text/javascript" src="/script/education-directory.min.js?t=20220314"></script>
+        <style>
+            body {
+                margin: 0;
+                padding: 0;
+            }
+            #results-placeholder {
+                margin-top: 10px;
+                display: grid;
+                grid-template-columns: repeat(auto-fill,250px);
+                column-gap: 20px;
+                row-gap: 20px;
+                grid-column-gap: 20px;
+                grid-row-gap: 20px;
+                list-style: none;
+                justify-content: center;
+                height: calc(93vh - 10px);
+                overflow-y: scroll;
+            }
+
+            #results-placeholder li {
+                list-style: none;
+                margin-top: 0;
+            }
+
+            #results-placeholder .faculty-name {
+                font-size: 1.2em;
+                font-weight: 700;
+                color: var(--il-blue);
+            }
+
+            #results-placeholder .faculty-location {
+                font-weight: 700;
+            }
+
+            #results-placeholder img {
+                width: 100%;
+            }
+
+            #results-menu {
+                position: fixed;
+                width: 100%;
+                vertical-align: middle;
+                height: 7vh;
+                top: calc(100% - 7vh);
+                justify-content: space-evenly;
+                display: flex;
+                background: var(--il-blue);
+                z-index: 500;
+            }
+
+            #results-menu a {
+                display: block;
+                padding: .5em;
+                color: white;
+                text-decoration: none;
+                font-size: 2em;
+            }
+
+            #results-menu a:visited, #results-menu a:focus, #results-menu a:hover {
+                color: white;
+            }
+
+        </style>
+    </head>
+    <body>
+    <div class="il-formatted">
+        <ul id="results-placeholder">
+        </ul>
+        <div id="results-menu">
+        </div>
+    </div>
+    </body>
+</html>
