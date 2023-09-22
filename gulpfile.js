@@ -27,4 +27,11 @@ gulp.task("simple-script", function () {
         .pipe(gulp.dest('script'));
 });
 
-gulp.task("default", gulp.series("styles", "simple-script", "lobby-script"));
+gulp.task("education-directory-script", function () {
+    var customJs = gulp.src(['_scripts/education-directory.js']);
+    return mergeseries(customJs)
+        .pipe(concat('education-directory.min.js'))
+        .pipe(gulp.dest('script'));
+});
+
+gulp.task("default", gulp.series("styles", "simple-script", "lobby-script", "education-directory-script"));
