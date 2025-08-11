@@ -1,11 +1,11 @@
 window.addEventListener('DOMContentLoaded', () => {
-    fetch(`https://facultyapi.itpartners.illinois.edu/api/Search/?collegeType=education&jobtypes=faculty[-]corefaculty[-]staff&take=2000&skip=0`, {
+    fetch(`https://directoryapi.wigg.illinois.edu/api/Directory/Search/education?jobtypes=faculty[-]corefaculty[-]staff&take=2000&skip=0`, {
         method: 'GET',
         headers: {
             "Content-type": "application/x-www-form-urlencoded; charset=UTF-8"
         }
     }).then(res => res.json()).then(data => {
-        createList(data.items);
+        createList(data.people);
     });
     setTimeout(function () { window.location.href = '/edlobby/index.html'; }, 300000);
 });
@@ -17,18 +17,18 @@ function createList(items) {
     let letter = "Z";
     for (var i = 0; i < items.length; i++) {
         let li = document.createElement('li');
-        if (!items[i].lastname.startsWith(letter)) {
-            letter = items[i].lastname[0];
+        if (!items[i].lastName.startsWith(letter)) {
+            letter = items[i].lastName[0];
             li.innerHTML = `<a name="${letter}"></a>`;
             let letterAnchor = document.createElement('a');
             letterAnchor.innerText = letter;
             letterAnchor.href = "#" + letter;
             letters.appendChild(letterAnchor);
         }
-        li.innerHTML += `<img alt="${items[i].fullnamefirst}" src="${items[i].image}" />
-        <div class="faculty-name">${items[i].fullnamefirst}</div>
-        <div class="faculty-information">${items[i].title}; ${items[i].department}</div>
-        <div class="faculty-location">${items[i].officelocation}</div>`;
+        li.innerHTML += `<img alt="${items[i].imageAltText}" src="${items[i].imageUrl}" />
+        <div class="faculty-name">${items[i].fullName}</div>
+        <div class="faculty-information">${items[i].primaryTitle}; ${items[i].primaryOffice}</div>
+        <div class="faculty-location">${items[i].roomNumber} ${items[i].building}</div>`;
         faculty.appendChild(li);
     }
     let backAnchor = document.createElement('a');
